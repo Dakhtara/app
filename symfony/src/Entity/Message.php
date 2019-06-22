@@ -404,7 +404,7 @@ class Message
     {
         foreach ($this->answers ?? [] as $answer) {
             /* @var \App\Entity\Answer $answer */
-            if (!$answer->getChoice()) {
+            if (!$answer->getChoice() || $answer->getChoice()->getCode() !== $answer->getRaw()) {
                 return true;
             }
         }

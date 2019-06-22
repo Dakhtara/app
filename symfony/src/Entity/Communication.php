@@ -425,6 +425,10 @@ class Communication
 
         foreach ($this->getMessages() as $message) {
             $cost += $message->getCost();
+
+            foreach ($message->getAnswers() as $answer) {
+                $cost += $answer->getCost();
+            }
         }
 
         return $cost;

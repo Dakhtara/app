@@ -224,4 +224,16 @@ class Answer
             $this->setUpdatedAt(new \DateTime());
         }
     }
+
+    /**
+     * @return float
+     */
+    public function getCost(): float
+    {
+        if (Communication::TYPE_EMAIL === $this->getMessage()->getCommunication()->getType()) {
+            return 0.0;
+        }
+
+        return getenv('NEXMO_INBOUND_PRICE');
+    }
 }

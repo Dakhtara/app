@@ -33,6 +33,7 @@ WEBSITE_URL=https://prod.redcall.io
 NEXMO_API_KEY=key
 NEXMO_API_SECRET=secret
 NEXMO_SEND_FROM=phonenumber
+NEXMO_INBOUND_PRICE = 0.0057
 
 MAPBOX_API_KEY=some key
 
